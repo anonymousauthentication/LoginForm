@@ -10,5 +10,6 @@ public class launchLoginTest extends BaseTest {
 	@Test(groups="Login")
 	public void lauchWeb() throws IOException {
 		launchWeb();
+		
 	}
 }
