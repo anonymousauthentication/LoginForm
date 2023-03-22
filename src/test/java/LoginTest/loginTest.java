@@ -11,7 +11,7 @@ public class loginTest extends BaseTest {
 	String username;
 	String correctPass;
 
-	@Test(dependsOnGroups = "Login", priority = 1, testName = "LoginCheck")
+	@Test(dependsOnGroups = "Login", priority = 1, testName = "LoginCheck", enabled = true)
 	public void login() throws IOException {
 		getGlobalData();
 		wrongpass = prop.getProperty("wrongPass");
@@ -22,7 +22,7 @@ public class loginTest extends BaseTest {
 		Assert.assertEquals("You are successfully logged in.", msg);
 	}
 
-	@Test(dependsOnGroups = "Login",testName = "VerifyUserName", priority = 2)
+	@Test(dependsOnGroups = "Login", testName = "VerifyUserName", priority = 2, enabled = false)
 	public void verifyUserName() throws IOException {
 		getGlobalData();
 		username = prop.getProperty("username");

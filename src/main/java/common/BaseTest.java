@@ -7,6 +7,8 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseTest {
 	public static WebDriver driver;
@@ -16,10 +18,20 @@ public class BaseTest {
 
 	public void invokeBrowser() throws IOException {
 		getGlobalData();
+		String browserName = prop.getProperty("browser");
 		weburl = prop.getProperty("loginpageurl");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
+		if(browserName.contains("chrome")) {
 		driver = new ChromeDriver(options);
+		}
+		else if  (browserName.equalsIgnoreCase("firefox")){
+			driver = new FirefoxDriver();
+		}
+		else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = new EdgeDriver();
+		}
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	}
 

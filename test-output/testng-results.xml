@@ -1,29 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="1" failed="1" skipped="0">
+<testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-22T00:04:42 IST" name="Default suite" finished-at="2023-03-22T00:04:55 IST" duration-ms="12898">
+  <suite started-at="2023-03-22T23:15:42 IST" name="Default suite" finished-at="2023-03-22T23:15:59 IST" duration-ms="16436">
     <groups>
       <group name="Login">
-        <method signature="launchLoginTest.lauchWeb()[pri:0, instance:LoginTest.launchLoginTest@659499f1]" name="lauchWeb" class="LoginTest.launchLoginTest"/>
+        <method signature="launchLoginTest.lauchWeb()[pri:0, instance:LoginTest.launchLoginTest@27462a88]" name="lauchWeb" class="LoginTest.launchLoginTest"/>
       </group> <!-- Login -->
     </groups>
-    <test started-at="2023-03-22T00:04:42 IST" name="Default test" finished-at="2023-03-22T00:04:55 IST" duration-ms="12898">
+    <test started-at="2023-03-22T23:15:42 IST" name="Default test" finished-at="2023-03-22T23:15:59 IST" duration-ms="16436">
       <class name="LoginTest.loginTest">
-        <test-method signature="verifyUserName()[pri:0, instance:LoginTest.loginTest@6bd61f98]" started-at="2023-03-22T00:04:53 IST" name="verifyUserName" depends-on-groups="Login" finished-at="2023-03-22T00:04:55 IST" duration-ms="1733" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="login()[pri:1, instance:LoginTest.loginTest@59505b48]" started-at="2023-03-22T23:15:50 IST" name="login" depends-on-groups="Login" finished-at="2023-03-22T23:15:59 IST" duration-ms="9081" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [jh] but found [rahul]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#inputUsername"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29a35b41a19a6bc7a6b57878ccc73a90, findElement {using=id, value=inputUsername}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58464}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58464/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29a35b41a19a6bc7a6b57878ccc73a90]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [jh] but found [rahul]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at LoginTest.loginTest.verifyUserName(loginTest.java:36)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#inputUsername"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29a35b41a19a6bc7a6b57878ccc73a90, findElement {using=id, value=inputUsername}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58464}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58464/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29a35b41a19a6bc7a6b57878ccc73a90
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+at LoginPageObject.loginFormPageObject.login(loginFormPageObject.java:64)
+at LoginPageObject.loginFormPageObject.loginCheck(loginFormPageObject.java:71)
+at LoginTest.loginTest.login(loginTest.java:23)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,13 +85,13 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserName -->
+        </test-method> <!-- login -->
       </class> <!-- LoginTest.loginTest -->
       <class name="LoginTest.launchLoginTest">
-        <test-method signature="lauchWeb()[pri:0, instance:LoginTest.launchLoginTest@659499f1]" started-at="2023-03-22T00:04:42 IST" name="lauchWeb" finished-at="2023-03-22T00:04:53 IST" duration-ms="11043" status="PASS">
+        <test-method signature="lauchWeb()[pri:0, instance:LoginTest.launchLoginTest@27462a88]" started-at="2023-03-22T23:15:42 IST" name="lauchWeb" finished-at="2023-03-22T23:15:50 IST" duration-ms="7204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchWeb -->

@@ -5,7 +5,7 @@
     <classes>
       <class name="LoginTest.loginTest">
         <methods>
-          <include name="verifyUserName"/>
+          <include name="login"/>
         </methods>
       </class> <!-- LoginTest.loginTest -->
     </classes>
